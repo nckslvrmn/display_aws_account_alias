@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Display AWS Account Alias in Console",
+    "description": "Browser Extension to show AWS account alias in console",
+    "version": "1.0.0",
+    "icons": {
+        "128": "icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "alias.js"
+            ],
+            "matches": [
+                "https://*.console.aws.amazon.com/*",
+                "https://phd.aws.amazon.com/*",
+                "https://*.console.amazonaws-us-gov.com/*",
+                "https://*.console.amazonaws.cn/*"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
